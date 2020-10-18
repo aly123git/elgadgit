@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block base%}
+
+
+
+
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="filters">
+              <ul>
+
+                  <li class="active" data-filter="*"><h4>Fresh {{one_fresh.power}} horse</h4></li>
+
+
+              </ul>
+            </div>
+          </div>
+
+            <div class="col-md-12">
+
+            <div class="filters-content">
+                <div class="row grid">
+
+
+<div class="col-md-12">
+            <div class="filters-content">
+                <div class="row grid">
+
+   <!-- product show -->
+
+
+                    <div class="col-lg-4 col-md-4 all des">
+                      <div class="product-item">
+                        <img src="{{one_fresh.image.url}}" alt="">
+                          <div class="down-content">
+                              <h4>  Fresh {{one_fresh.power}} horse  </h4>
+                            <p> <h4> warranty: {{one_fresh.warranty}} years </h4> </p>
+
+                          <p>{{one_fresh.description}}</p>
+                         <p> <h4>{{one_fresh.price}} EGP</h4></p>
+
+                           <div >
+                  <a href="{%url 'contact:contact_us'%}" class="filled-button">request product</a>
+                </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+          </div>
+
+
+
+
+                </div>
+            </div>
+                </div>
+
+
+        </div>
+      </div>
+    </div>
+<br>
+{%endblock%}
+

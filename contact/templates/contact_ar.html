@@ -1,0 +1,233 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Contact</title>
+
+    <!-- Bootstrap core CSS -->
+          <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+<!--
+
+TemplateMo 546 Sixteen Clothing
+
+https://templatemo.com/tm-546-sixteen-clothing
+
+-->
+
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/templatemo-sixteen.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.css' %}">
+
+  </head>
+
+  <body>
+
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="" >
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+
+
+                <h4>
+                    <a href="{%url 'contact:contact_us'%}" style="color: #f33f3f;">ENGLISH</a>
+                    ..
+                    <a href="{%url 'contact:contact_ar'%}" style="color: #f33f3f;">عربي</a>
+                </h4>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive" >
+            <ul class="navbar-nav ml-auto" dir="rtl">
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'home:home_ar'%}"  style="font-weight:bold">الصفحة الرئيسية
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'home:home_ar'%}"  style="font-weight:bold">منتجاتنا</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html" style="font-weight:bold">تعرف علينا</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{%url 'contact:contact_ar'%}"  style="font-weight:bold">تواصل معنا</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="page-heading contact-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-content">
+              <h4>تواصل معنا</h4>
+              <h2>دائما فى خدمتكم</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="send-message" >
+      <div class="container" >
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-heading">
+              <h3 style="color:red" >من فضلك ارسل الطلب او الاستفسار وسنقوم بالتواصل معكم فورا</h3>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="contact-form">
+              <form id="contact" action="" method="post">
+                               {% csrf_token %}
+
+                <div class="row">
+
+
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldst>
+                      <input name="subject" type="text" class="form-control"
+                             placeholder="رقم التليفون او الايميل للتواصل مع حضرتكم" required="">
+                    </fieldst>
+                  </div>
+
+                  <div class="col-lg-12">
+                    <fieldst>
+                      <textarea name="message" rows="6" class="form-control"
+                                placeholder="الرسالة" required=""></textarea>
+                    </fieldst>
+                  </div>
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("fieldset").click(function(){
+    alert("Thanks for contacting us :), we will contact you soon. please press OK");
+  });
+});
+</script>
+
+
+
+                  <div class="col-lg-12">
+                    <fieldset>
+                        <button type="submit" id="form-submit" class="filled-button"><h6>ارسل</h6></button>
+                    </fieldset>
+                  </div>
+
+
+
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <ul class="accordion">
+                <li>
+                  <a>عنواننا</a>
+                  <div class="content">
+                      <p>الغردقة - الدهار - خلف مسجد القطري</p>
+                  </div>
+              </li>
+              <li>
+                  <a>اتصل بنا</a>
+                  <div class="content">
+                      <p>67489950030</p>
+                  </div>
+              </li>
+
+              <li>
+                  <a>ساعات العمل</a>
+                  <div class="content">
+                      <p>  من الساعة 11 الي 7 مساءا</p>
+                  </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="inner-content">
+
+
+            <div class="col-md-12">
+<p style="color:blue">تواصل معنا عبر<p>
+              <ul class="social-icons">
+                <li><a href="//www.facebook.com"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="//www.twitter.com"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="//www.linkedin.com"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+
+          </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'js/owl.js' %}"></script>
+    <script src="{% static 'js/slick.js' %}"></script>
+    <script src="{% static 'js/isotope.js' %}"></script>
+    <script src="{% static 'js/accordions.js' %}"></script>
+
+
+    <script language = "text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t){                   //declaring the array outside of the
+      if(! cleared[t.id]){                      // function makes it static and global
+          cleared[t.id] = 1;  // you could use true and false, but that's more typing
+          t.value='';         // with more chance of typos
+          t.style.color='#fff';
+          }
+      }
+    </script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block base%}
+
+
+
+
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="filters">
+              <ul>
+
+                  <li class="active" data-filter="*"><h4>Fresh Air conditions</h4></li>
+
+
+              </ul>
+            </div>
+          </div>
+
+            <div class="col-md-12">
+
+            <div class="filters-content">
+                <div class="row grid">
+
+
+
+<div class="col-md-12">
+            <div class="filters-content">
+                <div class="row grid">
+
+{%for i in all_fresh%}
+                    <div class="col-lg-4 col-md-4 all des">
+                      <div class="product-item">
+                        <img src="{{i.image.url}}" alt="">
+
+                        <div class="down-content">
+                         <a href="{% url 'fresh:fresh_detail' i.id %}" <h4>Fresh {{i.power}} horse</h4> </a>
+                            <p> <h4> warranty: {{i.warranty}} years </h4> </p>
+
+                          <p>{{i.description}}</p>
+                         <p> <h4>{{i.price}} EGP</h4></p>
+
+                          <div >
+                  <a href="{% url 'fresh:fresh_detail' i.id %}" class="filled-button">request product</a>
+
+                </div>
+                        </div>
+                      </div>
+                    </div>
+{%endfor%}
+
+                </div>
+            </div>
+          </div>
+
+
+
+
+                </div>
+            </div>
+                </div>
+
+
+        </div>
+      </div>
+    </div>
+<br>
+{%endblock%}
+

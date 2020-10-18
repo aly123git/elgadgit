@@ -1,0 +1,69 @@
+{% extends 'base_ar.html' %}
+{%load static%}
+
+{% block base%}
+
+
+
+
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="filters">
+              <ul>
+
+                  <li class="active" data-filter="*"><h4>منتجات فريش</h4></li>
+
+
+              </ul>
+            </div>
+          </div>
+
+            <div class="col-md-12">
+
+            <div class="filters-content">
+                <div class="row grid">
+
+
+
+<div class="col-md-12">
+            <div class="filters-content">
+                <div class="row grid">
+
+{%for i in all_fresh_ar%}
+                    <div class="col-lg-4 col-md-4 all des">
+                      <div class="product-item">
+                        <img src="{{i.image.url}}" alt="">
+
+                        <div class="down-content">
+                         <a href="{% url 'fresh:fresh_detail_ar' i.id %}"> <h4  style="font-weight:bold">فريش {{i.power}} حصان</h4> </a>
+                            <p> <h4> الضمان: {{i.warranty}} سنوات </h4> </p>
+                            <p> <h4> {{i.price}} السعر بالجنيه</h4></p>
+                            <div >
+                  <a href="{% url 'fresh:fresh_detail_ar' i.id %}" class="filled-button">..تفاصيل عن المنتج</a>
+                            </div>
+                        </div>
+
+                      </div>
+                    </div>
+{%endfor%}
+
+                </div>
+            </div>
+          </div>
+
+
+
+
+                </div>
+            </div>
+                </div>
+
+
+        </div>
+      </div>
+    </div>
+<br>
+{%endblock%}
+

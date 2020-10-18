@@ -1,0 +1,74 @@
+{% extends 'base_ar.html' %}
+{%load static%}
+
+{% block base%}
+
+
+
+
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="filters">
+              <ul style="color:red">
+
+                  <li class="active" data-filter="*"><h2>فريش {{one_fresh.power}}حصان </h2> </li>
+
+
+              </ul>
+            </div>
+          </div>
+
+            <div class="col-md-12">
+
+            <div class="filters-content">
+                <div class="row grid">
+
+
+<div class="col-md-12">
+            <div class="filters-content">
+                <div class="row grid">
+
+   <!-- product show -->
+
+
+                    <div class="col-lg-4 col-md-4 all des">
+                      <div class="product-item">
+                        <img src="{{one_fresh.image.url}}" alt="">
+                          <div class="down-content">
+                              <h3> فريش{{one_fresh.power}}حصان  </h3>
+                              <br>
+                              <h4>الضمان: {{one_fresh.warranty}}سنوات </h4>
+                              <h4>السعر: {{one_fresh.price}}جنيه </h4>
+                              <h4>القوة: {{one_fresh.power}}حصان </h4>
+                              <h4>الوصف: {{one_fresh.description}}</h4>
+                           <div >
+                  <a href="{%url 'contact:contact_ar'%}" class="filled-button">اطلب المنتج</a>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+          </div>
+
+
+
+
+                </div>
+            </div>
+                </div>
+
+
+        </div>
+      </div>
+    </div>
+<br>
+{%endblock%}
+

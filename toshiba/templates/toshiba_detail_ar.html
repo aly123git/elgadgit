@@ -1,0 +1,74 @@
+{% extends 'base_ar.html' %}
+{%load static%}
+
+{% block base%}
+
+
+
+
+    <div class="products">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="filters">
+              <ul style="color:red">
+
+                  <li class="active" data-filter="*"><h2>توشيبا{{one_toshiba.power}}حصان </h2> </li>
+
+
+              </ul>
+            </div>
+          </div>
+
+            <div class="col-md-12">
+
+            <div class="filters-content">
+                <div class="row grid">
+
+
+<div class="col-md-12">
+            <div class="filters-content">
+                <div class="row grid">
+
+   <!-- product show -->
+
+
+                    <div class="col-lg-4 col-md-4 all des">
+                      <div class="product-item">
+                        <img src="{{one_toshiba.image.url}}" alt="">
+                          <div class="down-content">
+                              <h3 style="color:red;"">توشيبا{{one_toshiba.power}}حصان  </h4>
+                              <br>
+                              <h4>الضمان: {{one_toshiba.warranty}}سنوات </h4>
+                              <h4>السعر: {{one_toshiba.price}}جنيه </h4>
+                              <h4>القوة: {{one_toshiba.power}}حصان </h4>
+                              <h4>الوصف: {{one_toshiba.description}}</h4>
+                           <div >
+                  <a href="{%url 'contact:contact_us'%}" class="filled-button">اطلب المنتج</a>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+          </div>
+
+
+
+
+                </div>
+            </div>
+                </div>
+
+
+        </div>
+      </div>
+    </div>
+<br>
+{%endblock%}
+
